@@ -61,7 +61,7 @@ export class ChatGPTBot {
           "========");
         break;
       case "prompt":
-        let prompt = text.slice(command.length+1);
+        let prompt = "simple talk";
         if (talker instanceof RoomImpl) {
           setPromptByUsername(talker.id, prompt);
           await this.trySay(talker,"设置成功!");
