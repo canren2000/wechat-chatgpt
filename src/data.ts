@@ -65,7 +65,7 @@ function getAllData(): data {
 function setPromptByUsername(username: string, prompt: string): void {
   const user = getUserByUsername(username)
   if (user) {
-    user.prompt = prompt
+    user.prompt = username
   }else{
     addUser(username,prompt).prompt= prompt
   }
