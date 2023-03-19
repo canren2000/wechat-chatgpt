@@ -21,11 +21,7 @@ async function getCompletion(username:string,message: string): Promise<string> {
     // 添加用户输入的消息
     addSessionByUsername(username, {userMsg: message})
     // fill prompt
-    if(userData.prompt!==""){
-      messages.push({
-        role: ChatCompletionRequestMessageRoleEnum.System,
-        content: userData.prompt
-      })
+    userData.prompt = "simple talk";
     }
     // fill messages
     userData.session.map((item) => {
